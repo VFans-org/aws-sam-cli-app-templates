@@ -128,11 +128,11 @@
     },
     {
       "directory": "dotnet6/hello-pt",
-      "displayName": "Hello World Example .NET w/ Lambda Powertools",
+      "displayName": "Hello World Example .NET With Lambda Powertools",
       "dependencyManager": "cli-package",
       "appTemplate": "hello-world-powertools-dotnet",
       "packageType": "Zip",
-      "useCaseName": "Hello World Example"
+      "useCaseName": "Hello World Example With Powertools"
     },
     {
       "directory": "dotnet6/step-func",
@@ -266,7 +266,7 @@
     },
     {
       "directory": "java8/hello-pt-maven",
-      "displayName": "Hello World Example With Powertools",
+      "displayName": "Hello World Example Java With Lambda Powertools",
       "dependencyManager": "maven",
       "appTemplate": "hello-world-powertools-java",
       "packageType": "Zip",
@@ -342,7 +342,7 @@
     },
     {
       "directory": "java8.al2/hello-pt-maven",
-      "displayName": "Hello World Example With Powertools",
+      "displayName": "Hello World Example Java With Lambda Powertools",
       "dependencyManager": "maven",
       "appTemplate": "hello-world-powertools-java",
       "packageType": "Zip",
@@ -418,7 +418,7 @@
     },
     {
       "directory": "java11/hello-pt-maven",
-      "displayName": "Hello World Example With Powertools",
+      "displayName": "Hello World Example Java With Lambda Powertools",
       "dependencyManager": "maven",
       "appTemplate": "hello-world-powertools-java",
       "packageType": "Zip",
@@ -494,11 +494,11 @@
     },
     {
       "directory": "nodejs16.x/hello-ts-pt",
-      "displayName": "Hello World Example TypeScript w/ Lambda Powertools",
+      "displayName": "Hello World Example TypeScript With Lambda Powertools",
       "dependencyManager": "npm",
       "appTemplate": "hello-world-powertools-typescript",
       "packageType": "Zip",
-      "useCaseName": "Hello World Example"
+      "useCaseName": "Hello World Example With Powertools"
     },
     {
       "directory": "nodejs16.x/step-func",
@@ -602,11 +602,11 @@
     },
     {
       "directory": "nodejs18.x/hello-ts-pt",
-      "displayName": "Hello World Example TypeScript w/ Lambda Powertools",
+      "displayName": "Hello World Example TypeScript With Lambda Powertools",
       "dependencyManager": "npm",
       "appTemplate": "hello-world-powertools-typescript",
       "packageType": "Zip",
-      "useCaseName": "Hello World Example"
+      "useCaseName": "Hello World Example With Powertools"
     },
     {
       "directory": "nodejs18.x/step-func",
@@ -694,11 +694,11 @@
     },
     {
       "directory": "nodejs14.x/hello-ts-pt",
-      "displayName": "Hello World Example TypeScript w/ Lambda Powertools",
+      "displayName": "Hello World Example TypeScript With Lambda Powertools",
       "dependencyManager": "npm",
       "appTemplate": "hello-world-powertools-typescript",
       "packageType": "Zip",
-      "useCaseName": "Hello World Example"
+      "useCaseName": "Hello World Example With Powertools"
     },
     {
       "directory": "nodejs14.x/step-func",
@@ -874,7 +874,7 @@
     },
     {
       "directory": "python3.7/hello-pt",
-      "displayName": "Hello World Example With Powertools",
+      "displayName": "Hello World Example Python With Lambda Powertools",
       "dependencyManager": "pip",
       "appTemplate": "hello-world-powertools-python",
       "packageType": "Zip",
@@ -933,7 +933,7 @@
     },
     {
       "directory": "python3.8/hello-pt",
-      "displayName": "Hello World Example With Powertools",
+      "displayName": "Hello World Example Python With Lambda Powertools",
       "dependencyManager": "pip",
       "appTemplate": "hello-world-powertools-python",
       "packageType": "Zip",
@@ -1000,7 +1000,7 @@
     },
     {
       "directory": "python3.9/hello-pt",
-      "displayName": "Hello World Example With Powertools",
+      "displayName": "Hello World Example Python With Lambda Powertools",
       "dependencyManager": "pip",
       "appTemplate": "hello-world-powertools-python",
       "packageType": "Zip",
@@ -1056,6 +1056,73 @@
       "useCaseName": "Multi-step workflow with Connectors"
     }
   ],
+  "python3.10": [
+    {
+      "directory": "python3.10/hello",
+      "displayName": "Hello World Example",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "python3.10/hello-pt",
+      "displayName": "Hello World Example With Powertools",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-powertools-python",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example With Powertools"
+    },
+    {
+      "directory": "python3.10/event-bridge",
+      "displayName": "EventBridge Hello World",
+      "dependencyManager": "pip",
+      "appTemplate": "eventBridge-hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "python3.10/event-bridge-schema",
+      "displayName": "EventBridge App from scratch (100+ Event Schemas)",
+      "dependencyManager": "pip",
+      "appTemplate": "eventBridge-schema-app",
+      "isDynamicTemplate": "True",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "python3.10/step-func",
+      "displayName": "Step Functions Sample App (Stock Trader)",
+      "dependencyManager": "pip",
+      "appTemplate": "step-functions-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow"
+    },
+    {
+      "directory": "python3.10/efs",
+      "displayName": "Elastic File System Sample App",
+      "dependencyManager": "pip",
+      "appTemplate": "efs-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Lambda EFS example"
+    },
+    {
+      "directory": "python3.10/web-conn",
+      "displayName": "Quick Start: Web Backend With Connectors",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-connector",
+      "packageType": "Zip",
+      "useCaseName": "Serverless Connector Hello World Example"
+    },
+    {
+      "directory": "python3.10/step-func-conn",
+      "displayName": "Step Functions Sample App (Stock Trader) With Connectors",
+      "dependencyManager": "pip",
+      "appTemplate": "step-functions-with-connectors",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow with Connectors"
+    }
+  ],
   "ruby2.7": [
     {
       "directory": "ruby2.7/hello",
@@ -1087,7 +1154,7 @@
       "directory": "al2/rust/hello-ddb",
       "displayName": "DynamoDB Example",
       "dependencyManager": "cargo",
-      "appTemplate": "hello-world",
+      "appTemplate": "hello-world-ddb",
       "packageType": "Zip",
       "useCaseName": "DynamoDB Example"
     }
@@ -1189,6 +1256,48 @@
     },
     {
       "directory": "python3.9/apigw-xgboost",
+      "displayName": "XGBoost Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-xgboost",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    }
+  ],
+  "amazon/python3.10-base": [
+    {
+      "directory": "python3.10/hello-img",
+      "displayName": "Hello World Lambda Image Example",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "python3.10/apigw-pytorch",
+      "displayName": "PyTorch Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-pytorch",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    },
+    {
+      "directory": "python3.10/apigw-scikit",
+      "displayName": "Scikit-learn Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-scikit-learn",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    },
+    {
+      "directory": "python3.10/apigw-tensorflow",
+      "displayName": "Tensorflow Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-tensorflow",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    },
+    {
+      "directory": "python3.10/apigw-xgboost",
       "displayName": "XGBoost Machine Learning Inference API",
       "dependencyManager": "pip",
       "appTemplate": "ml-apigw-xgboost",

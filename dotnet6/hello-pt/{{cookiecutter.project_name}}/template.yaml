@@ -3,16 +3,18 @@ Transform: AWS::Serverless-2016-10-31
 Description: >
   Sample SAM Template with AWS Lambda Powertools for {{ cookiecutter.project_name }}
 
-
-Globals: # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
   Function:
     Timeout: 10
     MemorySize: 256
     Runtime: dotnet6
-  {%- if cookiecutter["Powertools Tracing"] == "enabled"%}
   Api:
+    # More info about OpenApiVersion: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-api.html#sam-api-openapiversion
+    OpenApiVersion: 3.0.1
+    {%- if cookiecutter["Powertools Tracing"] == "enabled"%}
     TracingEnabled: true
-  {%- endif %}
+    {%- endif %}
 
 Resources:
   HelloWorldFunction:
