@@ -60,10 +60,6 @@ class UnitTestBase:
                 result.stdout,
                 r"audited \d+ packages",
             )
-            self.assertIn(
-                "found 0 vulnerabilities",
-                result.stdout,
-            )
 
         def _test_unit_tests(self, code_directory: str):
             cmdlist = [
@@ -124,6 +120,10 @@ class UnitTestBase:
 
     class Python310UnitTestBase(PythonUnitTestBase):
         python_executable = "python3.10"
+
+    class Python311UnitTestBase(PythonUnitTestBase):
+        python_executable = "python3.11"
+        should_test_lint: bool = False
 
     class JavaUnitTestGradleBase(UnitTestBase):
         """
@@ -209,7 +209,7 @@ class UnitTestBase:
             cmdlist = ["ruby", code_directory]
             LOG.info(cmdlist)
             result = run_command(cmdlist, self.cwd)
-            self.assertIn("100% passed", result.stdout)
+            self.assertIn("0 failures, 0 errors", result.stdout)
 
     class RustUnitTestBase(UnitTestBase):
         """

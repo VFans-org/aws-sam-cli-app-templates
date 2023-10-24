@@ -1,12 +1,12 @@
 # {{ cookiecutter.project_name }}
 
-Congratulations, you have just created a Serverless "Hello World" application using the AWS Serverless Application Model (AWS SAM) for the `python3.7` runtime, and options to bootstrap it with [**AWS Lambda Powertools for Python**](https://awslabs.github.io/aws-lambda-powertools-python/latest/) (Lambda Powertools) utilities for Logging, Tracing and Metrics.
+Congratulations, you have just created a Serverless "Hello World" application using the AWS Serverless Application Model (AWS SAM) for the `python3.7` runtime, and options to bootstrap it with [**Powertools for AWS Lambda (Python)**](https://awslabs.github.io/aws-lambda-powertools-python/latest/) (Powertools for AWS Lambda (Python)) utilities for Logging, Tracing and Metrics.
 
-Powertools is a developer toolkit to implement Serverless best practices and increase developer velocity.
+Powertools for AWS Lambda (Python) is a developer toolkit to implement Serverless best practices and increase developer velocity.
 
-## Powertools features
+## Powertools for AWS Lambda (Python) features
 
-Powertools provides three core utilities:
+Powertools for AWS Lambda (Python) provides three core utilities:
 
 * **[Tracing](https://awslabs.github.io/aws-lambda-powertools-python/latest/core/tracer/)** - Decorators and utilities to trace Lambda function handlers, and both synchronous and asynchronous functions
 * **[Logging](https://awslabs.github.io/aws-lambda-powertools-python/latest/core/logger/)** - Structured logging made easier, and decorator to enrich structured logging with key Lambda context details
@@ -14,7 +14,7 @@ Powertools provides three core utilities:
 
 Find the complete project's [documentation here](https://awslabs.github.io/aws-lambda-powertools-python).
 
-### Installing AWS Lambda Powertools for Python
+### Installing Powertools for AWS Lambda (Python)
 
 With [pip](https://pip.pypa.io/en/latest/index.html) installed, run: 
 
@@ -22,7 +22,7 @@ With [pip](https://pip.pypa.io/en/latest/index.html) installed, run:
 pip install aws-lambda-powertools
 ```
 
-### Powertools Examples
+### Powertools for AWS Lambda (Python) Examples
 
 * [Tutorial](https://awslabs.github.io/aws-lambda-powertools-python/latest/tutorial)
 * [Serverless Shopping cart](https://github.com/aws-samples/aws-serverless-shopping-cart)
@@ -130,7 +130,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
 ```bash
-{{ cookiecutter.project_name }}$ sam logs -n HelloWorldFunction --stack-name {{ cookiecutter.project_name }} --tail
+{{ cookiecutter.project_name }}$ sam logs -n HelloWorldFunction --stack-name "{{ cookiecutter.__stack_name }}" --tail
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
@@ -145,7 +145,7 @@ Tests are defined in the `tests` folder in this project. Use PIP to install the 
 {{ cookiecutter.project_name }}$ python -m pytest tests/unit -v
 # integration test, requiring deploying the stack first.
 # Create the env variable AWS_SAM_STACK_NAME with the name of the stack we are testing
-{{ cookiecutter.project_name }}$ AWS_SAM_STACK_NAME=<stack-name> python -m pytest tests/integration -v
+{{ cookiecutter.project_name }}$ AWS_SAM_STACK_NAME="{{ cookiecutter.__stack_name }}" python -m pytest tests/integration -v
 ```
 
 ### Cleanup
@@ -153,7 +153,7 @@ Tests are defined in the `tests` folder in this project. Use PIP to install the 
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-sam delete --stack-name {{ cookiecutter.project_name }}
+sam delete --stack-name "{{ cookiecutter.__stack_name }}"
 ```
 
 ## Resources

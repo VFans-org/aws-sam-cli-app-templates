@@ -12,31 +12,31 @@
     </properties>
 
     <dependencies>
-        {%- if cookiecutter[ "Powertools Tracing" ] == "enabled" %}
+        {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Tracing" ] == "enabled" %}
         <dependency>
             <groupId>software.amazon.lambda</groupId>
             <artifactId>powertools-tracing</artifactId>
-            <version>1.13.0</version>
+            <version>1.17.0</version>
         </dependency>
         {%- endif %}
-        {%- if cookiecutter[ "Powertools Logging" ] == "enabled" %}
+        {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Logging" ] == "enabled" %}
         <dependency>
             <groupId>software.amazon.lambda</groupId>
             <artifactId>powertools-logging</artifactId>
-            <version>1.13.0</version>
+            <version>1.17.0</version>
         </dependency>
         {%- endif %}
-        {%- if cookiecutter[ "Powertools Metrics" ] == "enabled" %}
+        {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Metrics" ] == "enabled" %}
         <dependency>
             <groupId>software.amazon.lambda</groupId>
             <artifactId>powertools-metrics</artifactId>
-            <version>1.13.0</version>
+            <version>1.17.0</version>
         </dependency>
         {%- endif %}
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-lambda-java-core</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.2</version>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
@@ -54,27 +54,27 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
+                <groupId>dev.aspectj</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
-                <version>1.14.0</version>
+                <version>1.13.1</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                     <complianceLevel>${maven.compiler.target}</complianceLevel>
                     <aspectLibraries>
-                        {%- if cookiecutter[ "Powertools Tracing" ] == "enabled" %}
+                        {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Tracing" ] == "enabled" %}
                         <aspectLibrary>
                             <groupId>software.amazon.lambda</groupId>
                             <artifactId>powertools-tracing</artifactId>
                         </aspectLibrary>
                         {%- endif %}
-                        {%- if cookiecutter[ "Powertools Logging" ] == "enabled" %}
+                        {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Logging" ] == "enabled" %}
                         <aspectLibrary>
                             <groupId>software.amazon.lambda</groupId>
                             <artifactId>powertools-logging</artifactId>
                         </aspectLibrary>
                         {%- endif %}
-                        {%- if cookiecutter[ "Powertools Metrics" ] == "enabled" %}
+                        {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Metrics" ] == "enabled" %}
                         <aspectLibrary>
                             <groupId>software.amazon.lambda</groupId>
                             <artifactId>powertools-metrics</artifactId>

@@ -81,8 +81,8 @@ Resources:
   helloFromLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./src/{{cookiecutter.project_name}}/
-      Handler: {{cookiecutter.project_name}}::{{cookiecutter.project_name}}.Function::FunctionHandler
+      CodeUri: ./src/ScratchLambda/
+      Handler: ScratchLambda::ScratchLambda.Function::FunctionHandler
       Runtime: dotnet6
       MemorySize: 256
       Timeout: 100
@@ -131,7 +131,7 @@ Tests for the Lambda functions are defined in the `test` folder in this project.
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-aws cloudformation delete-stack --stack-name {{ cookiecutter.project_name }}
+sam delete --stack-name {{ cookiecutter.project_name }}
 ```
 
 ## Resources

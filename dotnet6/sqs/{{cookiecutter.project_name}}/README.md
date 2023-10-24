@@ -82,8 +82,8 @@ Resources:
   SQSPayloadLogger:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./src/{{cookiecutter.project_name}}/
-      Handler: {{cookiecutter.project_name}}::{{cookiecutter.project_name}}.Function::FunctionHandler
+      CodeUri: ./src/SQSEventSource/
+      Handler: SQSEventSource::SQSEventSource.Function::FunctionHandler
       Runtime: dotnet6
       MemorySize: 256
       DeadLetterQueue:
@@ -131,7 +131,7 @@ Tests for the Lambda functions are defined in the `test` folder in this project.
 To delete the sample application and the bucket that you created, use the AWS CLI.
 
 ```bash
-{{cookiecutter.project_name}}$ aws cloudformation delete-stack --stack-name sam-app
+{{cookiecutter.project_name}}$ sam delete --stack-name sam-app
 ```
 
 ## Resources
